@@ -1,0 +1,270 @@
+/*------------------------------ Week 6 transition and transformations u*/
+
+
+/*Based on https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions*/
+
+
+/* number 1 */
+
+.menuButton {
+	position: relative;
+	transition-property: background-color, color;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+	text-align: left;
+	background-color: grey;
+	left: 5px;
+	top: 5px;
+	height: 26px;
+	color: white;
+	border-color: black;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	box-shadow: 2px 2px 1px black;
+	padding: 2px 4px;
+	border: solid 1px black;
+}
+
+.menuButton:hover {
+	position: relative;
+	transition-property: background-color, color;
+	transition-duration: 1s;
+	transition-timing-function: ease-out;
+	background-color: white;
+	color: black;
+	box-shadow: 2px 2px 1px black;
+}
+
+
+/*Number 2*/
+
+ul li:hover {
+	-webkit-transform: translateX(15px);
+	-moz-transform: translateX(15px);
+	-o-transform: translateX(15px);
+	transform: translateX(15px);
+}
+
+
+/*Number 3*  see the About page/
+/*Here is attempt at animation  based on http://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3 */
+
+.my-animate {
+	position: relative;
+	-webkit-animation-name: example;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes example {
+	0% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		background-color: yellow;
+		left: 200px;
+		top: 0px;
+	}
+	50% {
+		background-color: blue;
+		left: 200px;
+		top: 200px;
+	}
+	75% {
+		background-color: green;
+		left: 0px;
+		top: 200px;
+	}
+	100% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+}
+
+
+/* Standard syntax */
+
+@keyframes example {
+	0% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		background-color: yellow;
+		left: 200px;
+		top: 0px;
+	}
+	50% {
+		background-color: blue;
+		left: 200px;
+		top: 200px;
+	}
+	75% {
+		background-color: green;
+		left: 0px;
+		top: 200px;
+	}
+	100% {
+		background-color: red;
+		left: 0px;
+		top: 0px;
+	}
+}
+
+
+/*END OF animation attempt*/
+
+/* -----------------------------------------end of week 6 
+
+
+/*Week 3 assignment use CSS styles  don't worry about esthetics */
+
+
+/*Here is a style by element type; note use of pseudo-class. It defines a style based on a state of an element*/
+
+
+/*
+p:hover {
+  background-color: chocolate;
+  border-width: thick;
+  border: 10px solid black;
+}
+*/
+
+
+/*Here is a style by element type */
+
+body {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: purple;
+	background-color: #d8da3d
+}
+
+
+/*Here is a use of CSS class*/
+
+.center {
+	text-align: center;
+	color: red;
+}
+
+
+/*Here is use of rem - causes the browser to resize into pixels, based on font size of the root element of the page (html element)*/
+
+.smaller {
+	font-size: .5rem;
+}
+
+.larger {
+	font-size: 1.5rem;
+}
+
+.stupid-larger {
+	font-size: 10.5rem;
+}
+
+
+/*Here is a use of CSS class to create round border*/
+
+.rcorners1 {
+	border-radius: 50px;
+	width: 50px;
+	height: 50px;
+	background-size: 50px;
+	background-position: right;
+}
+
+
+/*Here is demo of box model*/
+
+.box-model-test {
+	width: 300px;
+	padding: 25px;
+	border: 25px solid green;
+	margin: 25px;
+	outline-style: dotted;
+}
+
+.color1 {
+	background-color: dodgerblue;
+}
+
+
+/*Here is a fade.  Got code from https://bavotasan.com/2011/a-simple-fade-with-css3/*/
+
+.fade {
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+	opacity: 0.5;
+}
+
+
+/*Here is attempt at columns.  Source is http://www.w3schools.com/css/tryit.asp?filename=trycss3_column-rule-style */
+
+.newspaper {
+	-webkit-column-count: 3;
+	/* Chrome, Safari, Opera */
+	-moz-column-count: 3;
+	/* Firefox */
+	column-count: 3;
+	-webkit-column-gap: 40px;
+	/* Chrome, Safari, Opera */
+	-moz-column-gap: 40px;
+	/* Firefox */
+	column-gap: 40px;
+	-webkit-column-rule-style: solid;
+	/* Chrome, Safari, Opera */
+	-moz-column-rule-style: solid;
+	/* Firefox */
+	column-rule-style: solid;
+}
+
+
+
+
+/*Here is shadow   from http://www.w3schools.com/css/css3_shadows.asp*/
+
+.shadow-me {
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+
+/*Here is highlighting of hovered list items.  from http://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar*/
+
+li a:hover {
+	background-color: red;
+}
+
+
+/*Here is highlighting of hovered nav anchor*/
+
+
+/*
+
+nav a:hover {
+	background-color: limegreen;
+}
+*/
+
+
+/*Quotes from https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984
+ For this reason the primary purpose of using rem units should be to ensure that whatever default font size a user has their browser set to, the layout will adjust to accommodate the size of text within it.
+ For this reason, the primary purpose of em units should be to allow for scalability within the context of a specific design element
+ For this reason, I recommend only using em units if you identify a clear need for them.*/

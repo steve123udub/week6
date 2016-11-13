@@ -1,3 +1,21 @@
+/*------------------------------ Week 6 selections with n u*/
+
+h2:nth-of-type(2) {
+	color: black;
+}
+
+
+/*I realize this is ugly but I can't think of anything useufl to do with */
+
+p:nth-child(even) {
+	background-color: grey;
+}
+
+p:nth-child(odd) {
+	background-color: yellow;
+}
+
+
 /*------------------------------ Week 6 transition and transformations u*/
 
 
@@ -125,6 +143,7 @@ ul li:hover {
 
 /*END OF animation attempt*/
 
+
 /* -----------------------------------------end of week 6 
 
 
@@ -234,8 +253,6 @@ body {
 	/* Firefox */
 	column-rule-style: solid;
 }
-
-
 
 
 /*Here is shadow   from http://www.w3schools.com/css/css3_shadows.asp*/
